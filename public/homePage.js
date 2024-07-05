@@ -18,7 +18,6 @@ ApiConnector.getStocks((response) => {
     if (response.success) {
         ratesBoard.clearTable();
         ratesBoard.fillTable(response.data);
-        return;
     }  
 },); 
 }
