@@ -5,7 +5,7 @@ userForm.loginFormCallback = data => ApiConnector.login(data, function(response)
     if (response.success) {
         location.reload();
     } else {
-        throw new Error(response.error);
+        userForm.setLoginErrorMessage(response.error);
     }
 });
 
@@ -13,6 +13,6 @@ userForm.registerFormCallback = data => ApiConnector.register(data, function(res
     if (response.success) {
         location.reload();
     } else {
-        throw new Error(response.error);
+        userForm.setRegisterErrorMessage(response.error);
     }
 })
